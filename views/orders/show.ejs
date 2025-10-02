@@ -1,0 +1,13 @@
+<section class="order">
+  <h2>Order Details</h2>
+  <ul>
+    <% order.items.forEach(item => { %>
+    <li>
+      <%= item.product.name %> - $<%= item.product.price %> (x<%= item.quantity
+      %>)
+    </li>
+    <% }) %>
+  </ul>
+  <p><strong>Total:</strong> $<%= order.totalPrice %></p>
+  <a href="/products" class="btn btn-order">Continue Shopping</a>
+</section>

@@ -1,0 +1,18 @@
+<section class="product-detail">
+  <div class="detail-card">
+    <img src="<%= product.imageUrl %>" alt="<%= product.name %>" />
+    <div class="detail-info">
+      <h2><%= product.name %></h2>
+      <p class="description"><%= product.description %></p>
+      <p class="price"><strong>$<%= product.price %></strong></p>
+      <div class="actions">
+        <form action="/cart/add/<%= product._id %>" method="POST">
+          <button type="submit" class="btn">Add to Cart</button>
+        </form>
+        <a href="/products">
+          <button class="btn secondary">← Back to Products</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

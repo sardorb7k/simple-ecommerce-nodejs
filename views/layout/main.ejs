@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= title || "E-Commerce App" %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">E-Commerce App</a></h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/products">Products</a>
+        <a href="/cart">Cart</a>
+        <% if (!user) { %>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/register">Register</a>
+        <% } else { %>
+        <a href="/auth/logout">Logout</a>
+        <% } %>
+      </nav>
+    </header>
+
+    <main>
+      <%- body %>
+      <!-- page content injected here -->
+    </main>
+
+    <footer>
+      <p>© 2025 E-Commerce App</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<section class="card" style="max-width: 400px; margin: 40px auto">
+  <h2>Login</h2>
+
+  <% if (error) { %>
+  <div
+    style="
+      background: #ffe6e6;
+      color: #cc0000;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    "
+  >
+    <%= error %>
+  </div>
+  <% } %> <% if (success) { %>
+  <div
+    style="
+      background: #e6ffe6;
+      color: #006600;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    "
+  >
+    <%= success %>
+  </div>
+  <% } %>
+
+  <form method="POST" action="/auth/login">
+    <div style="margin-bottom: 12px">
+      <label>Username</label>
+      <input
+        name="username"
+        required
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+        "
+      />
+    </div>
+
+    <div style="margin-bottom: 12px">
+      <label>Password</label>
+      <input
+        type="password"
+        name="password"
+        required
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+        "
+      />
+    </div>
+
+    <button type="submit" class="btn" style="width: 100%">Login</button>
+  </form>
+
+  <p style="margin-top: 16px; text-align: center">
+    Don’t have an account? <a href="/auth/register">Register here</a>
+  </p>
+</section>

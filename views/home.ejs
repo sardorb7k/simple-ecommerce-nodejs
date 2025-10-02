@@ -1,0 +1,11 @@
+<section class="home">
+  <h2>Welcome to E-Commerce App</h2>
+  <p>Browse our latest products and shop with ease.</p>
+
+  <div class="home-actions">
+    <a href="/products" class="btn">Shop Now</a>
+    <% if (!user) { %>
+    <a href="/auth/register" class="btn secondary">Create Account</a>
+    <% } %>
+  </div>
+</section>
