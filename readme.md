@@ -27,9 +27,12 @@ A simple e-commerce application built with **Node.js**, **Express**, **MongoDB**
 - JWT_SECRET=your_jwt_secret
 - PORT=5000
 
-4. **Run the app**
+4. **Seed**
+   node seed.js
+
+5. **Run the app**
    npm start
-5. **Open your browser and go to http://localhost:5000**
+6. **Open your browser and go to http://localhost:5000**
 
 ---
 
